@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+                Parralax Schrolling Website | Vanila JavaScript
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css"></link>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">
+                Hello!!!
+            </a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+                
+            </ul>
+        </header>
+        <section>
+            <img src="atribut/stars.png" id="stars">
+            <img src="atribut/moon.png" id="moon">
+            <img src="atribut/mountains_behind.png" id="mountains_behind">
+            <img src="atribut/inosuke.png" id="inosuke">
+            <!--<h2 id="text">Gut Nite</h2>-->
+            <!--<a href="#sec" id="btn">Explore</a>-->
+            <img src="atribut/mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id=sec>
+            <h2>Parallax Scrolling Effect</h2>
+            <p>ini cuma coba. ini cuma coba.  cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. <br></br>ini cuma coba. ini cuma coba.  cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba. ini cuma coba.</p>
+        </div>
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let inosuke = document.getElementById('inosuke');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1 + 'px';
+            inosuke.style.top = value * 0.9 + 'px';
+            inosuke.style.left = value * 2 + 'px';
+            
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.left = value * 0 + 'px';
+            
+            //text.style.marginRight = value * 4 + 'px';
+            //text.style.marginTop = value * 1.2 + 'px';
+            header.style.Top = value * 0.5 + 'px';
+            }) 
+        </script>
+
+    </body>
+</html>
